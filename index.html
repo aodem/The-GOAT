@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPG</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <div id="main_container">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <button><img src="assets/images/brees.png" alt="drew brees" class="players"></button>
+                <button><img src="assets/images/rodgers.png" alt="aaron rodgers" class="players"></button>
+                <div class="w-100"></div>
+                <button><img src="assets/images/roethlisberger.png" alt="ben roethlisberger" class="players"></button>
+                <button class="players"><img src="assets/images/wilson.png" alt="russel wilson"></button>
+                <div class="w-100"></div>
+                <h1><span id="selectCall">SELECT:</span>Your Character</h1>
+            </div>
+            <div class="row justify-content-between">                
+                <div class="col-4 battlePos" id="positionLeft"></div>
+                <div class="col-2" id="versus">VS</div>
+                <div class="col-4 battlePos" id="positionRight"></div>                   
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    background-image: url('../images/football-stadium.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+img {
+    height: 100px;
+    width: 100px;
+}
+
+h1 {
+    color: white;
+}
+
+.battlePos {
+    height: 200px;
+    width: 150px;
+}
+
+#main_container {
+    margin: 5% 10%;
+}
+
+#selectCall {
+    color: red;
+}
+
+#versus {
+    color: red;
+    border-radius: 50%;
+    border: 2px solid #FD0000;
+    background: #DEA185;
+    height: 60px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Press Start 2P', cursive;
+
+}
