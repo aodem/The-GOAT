@@ -12,9 +12,27 @@ h1 {
     color: white;
 }
 
+p {
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
 .battlePos {
     height: 200px;
     width: 150px;
+}
+
+.card {
+    background: none;
+    border: .125em solid white;
+}
+
+.card-body {
+    background: red;
+    font-size: 1em;
+    padding: 0px;
+    line-height: 1;
 }
 
 #main_container {
