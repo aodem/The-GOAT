@@ -4,7 +4,7 @@ var game = {
     characterChoice: 1,
     opponentChoice: 1,
     opponentAttack: function (){
-        var attackPoint = Math.floor(Math.random() * 50);
+        var attackPoint = Math.floor(Math.random() * 9) + 1;
         return(attackPoint);
     },
     // charArray: [wilson, brees, rodgers, roethlisberger],
@@ -28,12 +28,38 @@ var game = {
             c.appendTo(bSib);
         }
     },
+    resetGame: function () {
+        charArray = [wilson, brees, rodgers, roethlisberger];
+        fighterArray = [];
+        enemyArray = [];
+        playerStrike;
+        opponentStrike;
+        player;
+        opponent;
+        opponentHealth;
+        playerHealth;
+        $("playerPick").empty();
+        $(".card-deck").empty();
+        $("#opponentPick").empty();
+        $("#playerPick").empty();
+        game.characterChoice = 1;
+        game.opponentChoice = 1;
+        game.charCards(charArray, ".card-deck");
+    },
     lifeCheck: function(para1, para2){
         if(para1 > 0 && para2 <= 0){
-        $("#opponentPick").empty()
-    }else if(para2 > 0 && para1 <=0){
-        $("playerPick").empty();
-    };
+            $("#opponentPick").empty();
+            alert("Pick A New Enemy QB!")
+            game.opponentChoice = 1;
+            game.characterChoice = 0;
+            enemyArray.pop();
+            console.log(game.characterChoice, game.opponentChoice);
+            }else if(para2 > 0 && para1 <=0){
+            alert("Seems you are not the GOAT after all!")    
+            game.resetGame();
+            console.log(game.characterChoice, game.opponentChoice);
+        };
+    },
 }
 
 var wilson = {
@@ -129,7 +155,7 @@ $(document).ready(function () {
        console.log(playerHealth, opponentHealth);
        $("#playerPick").children(".card").children(".card-body").children(".pH").text("HP: " + playerHealth);
        $("#opponentPick").children(".card").children(".card-body").children(".pH").text("HP: " + opponentHealth); 
-
+       game.lifeCheck(playerHealth, opponentHealth);
     })
 
 })
