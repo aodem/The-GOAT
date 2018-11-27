@@ -35,6 +35,14 @@ p {
     line-height: 1;
 }
 
+.card-header {
+    background: grey;
+}
+
+.card-footer {
+    background: red;
+}
+
 #main_container {
     margin: 5% 10%;
 }
@@ -92,4 +100,14 @@ p {
   border: 2px solid yellow;
   padding: 1em;
   height: 155px;
+}
+
+#instruction {
+    height: 20vh;
+    background: #fffaf0;
+    padding: 0.5em 1.25em;
+}
+
+#instruction,p {
+    color: black;
 }

@@ -102,6 +102,18 @@ var opponentHealth;
 var playerHealth;
 
 $(document).ready(function () {
+    $(".saber").hide();
+    //to start the game
+    $(document).on("keyup", function(e){
+        console.log(e)
+        if(e.keyCode === 32){
+            $("#start_screen").hide();
+            $(".saber").show()            
+        } else {
+            return false;
+        }
+    })
+    
     game.charCards(charArray,".card-deck");
     //player selecttion
     $(document).on("click", "img", function(){
