@@ -58,4 +58,38 @@ p {
 
 #attack {
     padding: 0px;
+    margin-right: 20px;
+}
+
+#impact {
+    background: black;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px greenyellow;
+  }
+  40% {
+    box-shadow: 0 0 20px greenyellow;
+  }
+  60% {
+    box-shadow: 0 0 20px greenyellow;
+  }
+  100% {
+    box-shadow: 0 0 -10px greenyellow;
+  }
+}
+
+#playerPick {
+  animation: glowing 1000ms infinite;
+  border: 2px solid yellow;
+  padding: 1em;
+  height: 155px;
+}
+
+#opponentPick {
+  animation: glowing 1000ms infinite;
+  border: 2px solid yellow;
+  padding: 1em;
+  height: 155px;
 }
