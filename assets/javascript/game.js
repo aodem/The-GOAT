@@ -4,7 +4,7 @@ var game = {
     characterChoice: 1,
     opponentChoice: 1,
     opponentAttack: function (){
-        var attackPoint = Math.floor(Math.random() * 9) + 1;
+        var attackPoint = Math.floor(Math.random() * 5) + 1;
         return(attackPoint);
     },
     // charArray: [wilson, brees, rodgers, roethlisberger],
@@ -49,7 +49,10 @@ var game = {
     lifeCheck: function(para1, para2){
         if(para1 > 0 && para2 <= 0){
             $("#opponentPick").empty();
-            alert("Pick A New Enemy QB!")
+            alert("Pick A New Enemy QB!");
+            alert("You have earned 30 Health Points");
+            playerHealth = playerHealth + 30;
+            $("#playerPick").children(".card").children(".card-body").children(".pH").text("HP: " + playerHealth);
             game.opponentChoice = 1;
             game.characterChoice = 0;
             enemyArray.pop();
