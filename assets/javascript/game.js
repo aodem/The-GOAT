@@ -111,7 +111,7 @@ $(document).ready(function () {
         console.log(e)
         if(e.keyCode === 32){
             $("#start_screen").hide();
-            $(".saber").show()            
+            $(".saber").show();          
         } else {
             return false;
         }

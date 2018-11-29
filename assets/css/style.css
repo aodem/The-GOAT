@@ -88,6 +88,7 @@ p {
   }
 }
 
+
 #playerPick {
   animation: glowing 1000ms infinite;
   border: 2px solid yellow;
@@ -114,4 +115,9 @@ p {
 
 #cta {
     color: floralwhite;
+}
+
+.sign {
+    color: white;
+    font-size: 1.25em;
 }
