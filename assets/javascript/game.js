@@ -63,6 +63,11 @@ var game = {
             console.log(game.characterChoice, game.opponentChoice);
         };
     },
+    winnerCheck: function(){
+        if(charArray === [] && playerHealth > 0){
+            alert("You have defeated them all! Claim your throne!")
+        }
+    },
 }
 
 var wilson = {
@@ -171,6 +176,7 @@ $(document).ready(function () {
        $("#playerPick").children(".card").children(".card-body").children(".pH").text("HP: " + playerHealth);
        $("#opponentPick").children(".card").children(".card-body").children(".pH").text("HP: " + opponentHealth); 
        game.lifeCheck(playerHealth, opponentHealth);
+       game.winnerCheck();
     })
 
 })
